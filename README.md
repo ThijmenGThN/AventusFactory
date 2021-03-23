@@ -1,5 +1,5 @@
 
-# <a href="https://aventus-170831.aventusfactory.nl" target="_blank">
+# <a href="https://aventus-170831.aventusfactory.nl" align="center">
     Visit AventusFactory
 </a>
 
