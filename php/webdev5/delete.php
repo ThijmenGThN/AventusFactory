@@ -26,9 +26,10 @@
 
 
     // Insert new data into database
-    $sql = 'DELETE FROM klant WHERE id=:id';
+    $id = $_POST['id'];
+    $sql = "DELETE FROM product WHERE productID = $id";
     $res = $pdo->prepare($sql);
-    $res->execute($values);
+    $res->execute();
 
 
     // Return

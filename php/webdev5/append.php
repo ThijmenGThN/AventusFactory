@@ -26,10 +26,10 @@
 
 
     // Insert new data into database
-    $sql = 'INSERT INTO product (type, producent, naam, soort, land, prijs, voorraad) VALUES (:type, :producent, :naam, :soort, :land, :prijs, :voorraad)';
+    $sql = "INSERT INTO product (categorie, producent, naam, soort, land, prijs, voorraad) VALUES (:categorie, :producent, :naam, :soort, :land, :prijs, :voorraad)";
     $res = $pdo->prepare($sql);
     $values = [
-        'type' => $_POST['type'],
+        'categorie' => $_POST['categorie'],
         'producent' => $_POST['producent'],
         'naam' => $_POST['naam'],
         'soort' => $_POST['soort'],
@@ -38,5 +38,10 @@
         'voorraad' => $_POST['voorraad']
     ];
     $res->execute($values);
+
+
+    // Return
+    header('Location: /php/webdev5/');
+    exit;
 
 ?>
